@@ -1,0 +1,234 @@
+$lightBlue: #5B85AA;
+$pink: #D81E5B;
+
+body {
+  margin: 0px;
+  font-family: Lato;
+  color: white;
+}
+header {
+  padding-top: 10px;
+  background-color: #2e294e;
+  text-align: center;
+  font-family: Lato;
+  .path {
+    stroke-dasharray: 4000;
+    stroke-dashoffset: 4000;
+    animation: dash 7s linear forwards;
+  }
+  svg {
+    position: relative;
+    top: -10px;
+    .project-link {
+      cursor: pointer;
+    }
+    #power-button-overlay {
+      cursor: pointer;
+      fill: none;
+      pointer-events: all;
+    }
+    .windows {
+      display: none;
+      &.active {
+        display: inline-block;
+      }
+    }
+    #windows-shutDown {
+      fill: none;
+      &.active {
+        fill: black;
+      }
+    }
+  }
+  h1 {
+    position: absolute;
+    margin: 0px;
+    top: 10vw;
+    left: 50%;
+    font-size: 50px;
+    transform: translateX(-50%);
+  }
+  p {
+    position: absolute;
+    top: 20vw;
+    font-size: 18px;
+    color: black;
+  }
+  .sparks {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+    animation: dash 0.5s linear forwards;
+  }
+  #sparks1 {
+    animation-delay: 4s;
+  }
+  #sparks2 {
+    animation-delay: 5s;
+  }
+  #sparks3 {
+    animation-delay: 6s;
+  }
+  #sparks4 {
+    animation-delay: 7s;
+  }
+  #sparks5 {
+    animation-delay: 8s;
+  }
+  #sparks6 {
+    animation-delay: 9s;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#portfolio-section {
+  width: 100%;
+  top: 0vw;
+  position: relative;
+  margin-top: -58vw;
+  svg {
+    position: relative;
+    z-index: 0;
+  }
+  #portfolio {
+    height: auto;
+    margin-top: -75vw;
+    z-index: -10;
+    background-color: $lightBlue;
+    h2,
+    p {
+      margin: 0px;
+      text-align: center;
+      color: white;
+      position: relative;
+      z-index: 1;
+    }
+    h2 {
+      font-size: 3.5rem;
+      margin-bottom: 0px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 50px;
+    }
+    .portfolio-item-holder {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      .portfolio-item {
+        width: 400px;
+        height: 300px;
+        margin-bottom: 50px;
+        position: relative;
+        box-shadow: 1px 1px 5px 1px rgba(0,0,0,.4);
+        cursor: pointer;
+        .overlay{
+          position: relative;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: transparent;
+          z-index: 10;
+          visibility: hidden;
+          .overlay-text{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            h3{
+              font-size: 24px;
+            }
+          }
+        }
+        a{
+          text-decoration: none;
+          color: white;
+          display: none;
+          position: absolute;
+          bottom: 20px;
+          left: 15%;
+          background-color: #000;
+          padding: 10px 20px;
+          border-radius: 20px;
+          z-index: 100;
+          &.demo{
+            left: 65%;
+          }
+        }
+        &:hover{
+          a{
+            display: inline-block;
+          }
+          .overlay{
+            background-color: rgba(0,0,0,.8);
+            visibility: visible;
+          }
+        }
+        img{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      padding-bottom: 50px;
+    }
+  }
+  .codepen{
+      padding: 40px 0px;
+      padding-bottom: 200px;
+      height: auto;
+      position: relative;
+      .pen{
+          position: relative;
+          padding: 30px;
+          height: auto;
+          margin-bottom: 40px;
+          width: 85%;
+          left: 50%;
+          transform: translateX(-50%);
+      }
+  }
+}
+.about-section{
+  position: relative;
+  margin-top: -20vw;
+  max-height: 500px;
+  .about{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+    background-color: $pink;
+    position: relative;
+    transform: translateX(-50%);
+    top: -20vw;
+    left: 50%;
+    padding: 0px 40px;
+    padding-bottom: 80px;
+    .about-text{
+        flex-basis: 30vw;
+        h2{
+            width: 100%;
+            margin: 0px;
+            margin-bottom: 40px;
+            font-size: 3rem;
+        }
+        p{
+            width: auto;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+    }
+   img{
+       flex-basis: 60vw;
+       padding-left: 20px;
+       width: 100%;
+       max-width: 400px;
+       height: auto;
+       margin-bottom: 50px;
+    }
+  }
+}
