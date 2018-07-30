@@ -209,7 +209,8 @@ header {
     padding: 0px 40px;
     padding-bottom: 80px;
     .about-text{
-        flex-basis: 30vw;
+        flex-basis: 45vw;
+        text-align: center;
         h2{
             width: 100%;
             margin: 0px;
@@ -218,17 +219,19 @@ header {
         }
         p{
             width: auto;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin-bottom: 10px;
+            line-height: 1.5rem;
+            margin-bottom: 30px;
         }
     }
    img{
-       flex-basis: 60vw;
-       padding-left: 20px;
-       width: 100%;
-       max-width: 400px;
+       flex-basis: 30vw;
+       width: auto;
+       align-self: center;
        height: auto;
        margin-bottom: 50px;
+       align-self: center;
     }
   }
 }
